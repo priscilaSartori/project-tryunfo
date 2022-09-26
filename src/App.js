@@ -5,6 +5,7 @@ class App extends React.Component {
     return (
       <div>
         <h2>Tryunfo</h2>
+
       </div>
     );
   }
