@@ -34,7 +34,7 @@ class Form extends React.Component {
         </div>
         <div>
           <label htmlFor="description">
-            Nome
+            Description
             <textarea
               data-testid="description-input"
               id="description"
@@ -147,7 +147,7 @@ Form.propTypes = {
   // hasTrunfo: PropTypes.bool.isRequired,
   isSaveButtonDisabled: PropTypes.bool.isRequired,
   onInputChange: PropTypes.func.isRequired,
-  onSaveButtonClick: PropTypes.func.isRequired,
+  onSaveButtonClick: PropTypes.func,
 };
 
 export default Form;
