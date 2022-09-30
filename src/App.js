@@ -14,6 +14,7 @@ class App extends React.Component {
     cardTrunfo: false,
     hasTrunfo: false,
     isSaveButtonDisabled: true,
+    listCard: [],
   };
 
   buttonSave = () => {
@@ -61,7 +62,27 @@ class App extends React.Component {
   };
 
   onSaveButtonClick = () => {
+    const {
+      cardName,
+      cardDescription,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardImage,
+      cardRare,
+      listCard,
+    } = this.state;
+    const newCard = {
+      cardName,
+      cardDescription,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardImage,
+      cardRare,
+    };
     this.setState({
+      listCard: [...listCard, newCard],
       cardName: '',
       cardDescription: '',
       cardAttr1: '0',
@@ -84,6 +105,7 @@ class App extends React.Component {
       cardTrunfo,
       hasTrunfo,
       isSaveButtonDisabled,
+      listCard,
     } = this.state;
     return (
       <div>
@@ -113,6 +135,22 @@ class App extends React.Component {
           cardTrunfo={ cardTrunfo }
           hasTrunfo={ hasTrunfo }
         />
+        <section>
+          <h2>Todas as cartas</h2>
+          {listCard.map((card) => (
+            <Card
+              key="card.cardName"
+              cardName={ card.cardName }
+              cardDescription={ card.cardDescription }
+              cardAttr1={ card.cardAttr1 }
+              cardAttr2={ card.cardAttr2 }
+              cardAttr3={ card.cardAttr3 }
+              cardImage={ card.cardImage }
+              cardRare={ card.cardRare }
+              cardTrunfo={ card.cardTrunfo }
+              hasTrunfo={ card.hasTrunfo }
+            />))}
+        </section>
       </div>
     );
   }
