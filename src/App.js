@@ -15,6 +15,7 @@ class App extends React.Component {
     hasTrunfo: false,
     isSaveButtonDisabled: true,
     listCard: [],
+    filterName: '',
   };
 
   buttonSave = () => {
@@ -116,6 +117,12 @@ class App extends React.Component {
     });
   };
 
+  onSearchChange = (event) => {
+    this.setState({
+      filterName: event.target.value,
+    });
+  };
+
   render() {
     const {
       cardName,
@@ -129,7 +136,11 @@ class App extends React.Component {
       hasTrunfo,
       isSaveButtonDisabled,
       listCard,
+      filterName,
     } = this.state;
+
+    const cardFilterName = listCard.filter((card) => card.cardName.includes(filterName));
+
     return (
       <div>
         <h1>Tryunfo</h1>
@@ -160,7 +171,18 @@ class App extends React.Component {
         />
         <section>
           <h2>Todas as cartas</h2>
-          {listCard.map((card) => (
+          <h4>
+            O termo pesquisado é:
+            {' '}
+            {filterName}
+          </h4>
+          <input
+            type="text"
+            data-testid="name-filter"
+            placeholder="Digite o nome da carta"
+            onChange={ this.onSearchChange }
+          />
+          {cardFilterName.map((card) => (
             <div key={ card.cardName }>
               <Card
                 cardName={ card.cardName }
