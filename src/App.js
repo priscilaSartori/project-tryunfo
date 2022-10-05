@@ -16,9 +16,10 @@ class App extends React.Component {
     isSaveButtonDisabled: true,
     listCard: [],
     listFilter: [],
-    renderList: [],
+    listTrunfo: [],
     nameFilter: '',
     rareFilter: '',
+    trunfoFilter: false,
   };
 
   deleteCard = ({ target }) => {
@@ -42,13 +43,7 @@ class App extends React.Component {
 
   buttonSave = () => {
     const {
-      cardName,
-      cardDescription,
-      cardAttr1,
-      cardAttr2,
-      cardAttr3,
-      cardImage,
-      cardRare,
+      cardName, cardDescription, cardAttr1, cardAttr2, cardAttr3, cardImage, cardRare,
     } = this.state;
     const pontosMax = 90;
     const pontosMin = 0;
@@ -82,24 +77,15 @@ class App extends React.Component {
     this.setState({
       [name]: value,
     }, () => {
-      this.buttonSave();
-      this.cardTrunfo();
-      this.cardFilterName();
-      this.cardFilterRare();
+      this.buttonSave(); this.cardTrunfo(); this.cardFilterTrunfo();
+      this.cardFilterName(); this.cardFilterRare();
     });
   };
 
   onSaveButtonClick = () => {
     const {
-      cardName,
-      cardDescription,
-      cardAttr1,
-      cardAttr2,
-      cardAttr3,
-      cardImage,
-      cardRare,
-      listCard,
-      listFilter,
+      cardName, cardDescription, cardAttr1, cardAttr2, cardAttr3, cardImage,
+      cardRare, listCard, cardTrunfo,
     } = this.state;
     const newCard = {
       cardName,
@@ -109,6 +95,7 @@ class App extends React.Component {
       cardAttr3,
       cardImage,
       cardRare,
+      cardTrunfo,
     };
     this.setState({
       listCard: [...listCard, newCard],
@@ -119,8 +106,20 @@ class App extends React.Component {
       cardAttr3: '0',
       cardImage: '',
       cardRare: 'normal',
+      cardTrunfo: false,
       listFilter: [...listCard, newCard],
     });
+  };
+
+  renderCard = () => {
+    const { listFilter, listCard, listTrunfo, trunfoFilter } = this.state;
+    if (trunfoFilter) {
+      return listTrunfo;
+    } if (!trunfoFilter || listFilter) {
+      return listFilter;
+    } if (!trunfoFilter || !listFilter) {
+      return listCard;
+    }
   };
 
   cardFilterName = () => {
@@ -129,44 +128,28 @@ class App extends React.Component {
     this.setState({ listFilter: cardFilterN });
   };
 
-  renderCard = () => {
-    const { listFilter, listCard } = this.state;
-    if (listFilter) {
-      return listFilter;
-    } if (!listFilter) {
-      return listCard;
-    }
-  };
-
   cardFilterRare = () => {
     const { listFilter, rareFilter } = this.state;
-    console.log(rareFilter);
     if (rareFilter !== 'todas') {
       const cardFilterR = listFilter.filter((card) => card.cardRare === rareFilter);
-      console.log(cardFilterR);
       this.setState({ listFilter: cardFilterR });
     } if (rareFilter === 'todas') {
       this.setState({ listFilter });
     }
   };
 
+  cardFilterTrunfo = () => {
+    const { trunfoFilter, listFilter } = this.state;
+    if (trunfoFilter) {
+      const cardFilterT = listFilter.filter((card) => card.cardTrunfo);
+      this.setState({ listTrunfo: cardFilterT });
+    }
+  };
+
   render() {
     const {
-      cardName,
-      cardDescription,
-      cardAttr1,
-      cardAttr2,
-      cardAttr3,
-      cardImage,
-      cardRare,
-      cardTrunfo,
-      hasTrunfo,
-      isSaveButtonDisabled,
-      listFilter,
-      listCard,
-      renderList,
-      nameFilter,
-      rareFilter,
+      cardName, cardDescription, cardAttr1, cardAttr2, cardAttr3, cardImage, cardRare,
+      cardTrunfo, hasTrunfo, isSaveButtonDisabled, nameFilter, rareFilter, trunfoFilter,
     } = this.state;
 
     return (
@@ -206,6 +189,7 @@ class App extends React.Component {
             placeholder="Digite o nome da carta"
             id="nameFilter"
             name="nameFilter"
+            disabled={ trunfoFilter }
             value={ nameFilter }
             onChange={ this.onInputChange }
           />
@@ -214,6 +198,7 @@ class App extends React.Component {
             type="select"
             id="rareFilter"
             name="rareFilter"
+            disabled={ trunfoFilter }
             value={ rareFilter }
             onChange={ this.onInputChange }
           >
@@ -223,6 +208,17 @@ class App extends React.Component {
             <option value="raro">raro</option>
             <option value="muito raro">Muito raro</option>
           </select>
+          <label htmlFor="trunfoFilter">
+            Super Trunfo
+            <input
+              id="trunfoFilter"
+              type="checkbox"
+              data-testid="trunfo-filter"
+              name="trunfoFilter"
+              value={ trunfoFilter }
+              onChange={ this.onInputChange }
+            />
+          </label>
           {this.renderCard().map((card) => (
             <div key={ card.cardName }>
               <Card
