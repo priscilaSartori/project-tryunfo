@@ -81,7 +81,12 @@ class App extends React.Component {
     const value = (target.type === 'checkbox') ? target.checked : target.value;
     this.setState({
       [name]: value,
-    }, () => { this.buttonSave(); this.cardTrunfo(); this.cardFilterName(); });
+    }, () => {
+      this.buttonSave();
+      this.cardTrunfo();
+      this.cardFilterName();
+      this.cardFilterRare();
+    });
   };
 
   onSaveButtonClick = () => {
@@ -120,9 +125,7 @@ class App extends React.Component {
 
   cardFilterName = () => {
     const { nameFilter, listCard } = this.state;
-    console.log(nameFilter);
     const cardFilterN = listCard.filter((card) => card.cardName.includes(nameFilter));
-    console.log(cardFilterN);
     this.setState({ listFilter: cardFilterN });
   };
 
@@ -134,15 +137,18 @@ class App extends React.Component {
       return listCard;
     }
   };
-  // cardFilterRare = () => {
-  //   const { listFilter, filterRare } = this.state;
-  //   console.log(filterRare);
-  //   if (filterRare !== 'todas') {
-  //     const cardFilterR = listFilter.filter((card) => card.cardRare === filterRare.value);
-  //     cnsole.log(cardFilterR);
-  //     this.setState({ listFilter: cardFilterR });
-  //   }
-  // };
+
+  cardFilterRare = () => {
+    const { listFilter, rareFilter } = this.state;
+    console.log(rareFilter);
+    if (rareFilter !== 'todas') {
+      const cardFilterR = listFilter.filter((card) => card.cardRare === rareFilter);
+      console.log(cardFilterR);
+      this.setState({ listFilter: cardFilterR });
+    } if (rareFilter === 'todas') {
+      this.setState({ listFilter });
+    }
+  };
 
   render() {
     const {
@@ -160,6 +166,7 @@ class App extends React.Component {
       listCard,
       renderList,
       nameFilter,
+      rareFilter,
     } = this.state;
 
     return (
@@ -205,8 +212,10 @@ class App extends React.Component {
           <select
             data-testid="rare-filter"
             type="select"
-            id="filterRare"
-            onChange={ this.cardFilterRare }
+            id="rareFilter"
+            name="rareFilter"
+            value={ rareFilter }
+            onChange={ this.onInputChange }
           >
             Raridade
             <option value="todas">todas</option>
