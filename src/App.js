@@ -57,22 +57,24 @@ class App extends React.Component {
     const somaAtrib = totalAtrib > pontosTotal;
     if (camposText || camposAtrib1 || camposAtrib2 || camposAtrib3 || somaAtrib) {
       this.setState({ isSaveButtonDisabled: true });
-    } this.setState({ isSaveButtonDisabled: false });
+    } else {
+      this.setState({ isSaveButtonDisabled: false });
+    }
   };
 
   cardTrunfo = () => {
     const { cardTrunfo } = this.state;
     if (cardTrunfo) {
       this.setState({ hasTrunfo: true });
-    } this.setState({ hasTrunfo: false });
+    } else {
+      this.setState({ hasTrunfo: false });
+    }
   };
 
   onInputChange = ({ target }) => {
     const { name } = target;
     const value = (target.type === 'checkbox') ? target.checked : target.value;
-    this.setState({
-      [name]: value,
-    }, () => {
+    this.setState({ [name]: value }, () => {
       this.buttonSave(); this.cardTrunfo(); this.cardFilterName();
       this.cardFilterRare(); this.cardFilterTrunfo();
     });
@@ -150,7 +152,6 @@ class App extends React.Component {
       cardName, cardDescription, cardAttr1, cardAttr2, cardAttr3, cardImage, cardRare,
       cardTrunfo, hasTrunfo, isSaveButtonDisabled, nameFilter, rareFilter, trunfoFilter,
     } = this.state;
-
     return (
       <div>
         <h1>Tryunfo</h1>
@@ -246,5 +247,4 @@ class App extends React.Component {
     );
   }
 }
-
 export default App;
