@@ -57,18 +57,14 @@ class App extends React.Component {
     const somaAtrib = totalAtrib > pontosTotal;
     if (camposText || camposAtrib1 || camposAtrib2 || camposAtrib3 || somaAtrib) {
       this.setState({ isSaveButtonDisabled: true });
-    } else {
-      this.setState({ isSaveButtonDisabled: false });
-    }
+    } this.setState({ isSaveButtonDisabled: false });
   };
 
   cardTrunfo = () => {
     const { cardTrunfo } = this.state;
     if (cardTrunfo) {
       this.setState({ hasTrunfo: true });
-    } else {
-      this.setState({ hasTrunfo: false });
-    }
+    } this.setState({ hasTrunfo: false });
   };
 
   onInputChange = ({ target }) => {
@@ -77,8 +73,8 @@ class App extends React.Component {
     this.setState({
       [name]: value,
     }, () => {
-      this.buttonSave(); this.cardTrunfo(); this.cardFilterTrunfo();
-      this.cardFilterName(); this.cardFilterRare();
+      this.buttonSave(); this.cardTrunfo(); this.cardFilterName();
+      this.cardFilterRare(); this.cardFilterTrunfo();
     });
   };
 
@@ -113,6 +109,9 @@ class App extends React.Component {
 
   renderCard = () => {
     const { listFilter, listCard, listTrunfo, trunfoFilter } = this.state;
+    console.log('trunfo', listTrunfo);
+    console.log('filter', listFilter);
+    console.log('card', listCard);
     if (trunfoFilter) {
       return listTrunfo;
     } if (!trunfoFilter || listFilter) {
@@ -123,8 +122,8 @@ class App extends React.Component {
   };
 
   cardFilterName = () => {
-    const { nameFilter, listCard } = this.state;
-    const cardFilterN = listCard.filter((card) => card.cardName.includes(nameFilter));
+    const { nameFilter, listFilter } = this.state;
+    const cardFilterN = listFilter.filter((card) => card.cardName.includes(nameFilter));
     this.setState({ listFilter: cardFilterN });
   };
 
