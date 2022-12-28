@@ -1,5 +1,7 @@
 # Boas-vindas ao repositório do projeto Tryunfo!
 
+Projeto de avaliação feito durante o curso da Trybe.
+
 <details>
   <summary><strong>👨‍💻 O que deverá ser desenvolvido</strong></summary><br />
 
