@@ -1,0 +1,88 @@
+body {
+  align-items: center;
+  background-color: #052727;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+}
+
+.boxBranco {
+  align-items: center;
+  background: #FFFFFF;
+  border-radius: 20px;
+  box-shadow: 0 4px 19px rgba(0, 0, 0, 0.8);
+  color: black;
+  display: flex;
+  flex-direction: row;
+  height: 721px;
+  justify-content: space-around;
+  left: 78px;
+  top: 473px;
+  width: 1124px;
+}
+
+.todasCartas {
+  align-items: center;
+  color: #FFFFFF;
+  display: flex;
+  font-family: 'Epilogue';
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 600;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.filtro {
+  align-items: center;
+  background: #036B52;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: row;
+  height: 75px;
+  justify-content: space-around;
+  left: 78px;
+  top: 950px;
+  width: 1124px;
+}
+
+.filtroBusca {
+  align-items: center;
+  color: #FFFFFF;
+  font-family: 'Epilogue';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  height: 21px;
+  justify-content: center;
+  top: 1368px;
+  width: 160px;
+}
+
+.name {
+  height: 40px;
+  left: 225.33px;
+  top: 25px;
+  width: 350px;
+}
+
+.rare {
+  height: 45px;
+  left: 625.33px;
+  top: 15px;
+  width: 350px;
+}
+
+.checked {
+  color: #FFFFFF;
+  height: 21px;
+  left: 988px;
+  top: 25px;
+  width: 120px;
+}
+
+.logo {
+  display: flex;
+  margin-left: 25%;
+}

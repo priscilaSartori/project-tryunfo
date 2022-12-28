@@ -1,0 +1,255 @@
+.visualizacao {
+  height: 593px;
+  left: 50px;
+  top: 40px;
+  width: 404px;
+}
+
+.preVisualization {
+  color: #2FC18C;
+  font-family: 'Epilogue';
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 800;
+  height: 36px;
+  left: 744px;
+  line-height: 29px;
+  text-align: center;
+  text-transform: uppercase;
+  top: 527px;
+  width: 355px;
+}
+
+.carta {
+  align-items: center;
+  background: #FFFFFF;
+  border-radius: 9.73277px;
+  box-shadow: 0px 3.89311px 18.4923px rgba(0, 0, 0, 0.25);
+  display: flex;
+  height: 534.33px;
+  justify-content: center;
+  left: 742px;
+  width: 358.17px;
+}
+
+.fundo {
+  background: #036B52;
+  border-radius: 9.73277px;
+  display: flex;
+  flex-direction: column;
+  height: 514.86px;
+  justify-content: center;
+  left: 751.73px;
+  width: 338.7px;
+}
+
+.cardName {
+  align-items: center;
+  background: #023031;
+  border-radius: 9.73277px 9.73277px 0 0;
+  color: #FFFFFF;
+  display: flex;
+  font-family: 'Epilogue';
+  font-size: 27.2518px;
+  font-style: normal;
+  font-weight: 700;
+  height: 40px;
+  justify-content: flex-end;
+  left: 1454px;
+  line-height: 28px;
+  margin: 0;
+  position: absolute;
+  top: 540px;
+  width: 308.53px;
+  z-index: 1;
+}
+
+.imagem {
+  height: 270.57px;
+  left: 1454px;
+  position: absolute;
+  top: 550px;
+  width: 308.53px;
+  z-index: 0;
+}
+
+.imagem2 {
+  height: 270.57px;
+  left: 1454px;
+  position: absolute;
+  top: 550px;
+  width: 308.53px;
+  z-index: -1;
+}
+
+.cardDescription {
+  color: #FFFFFF;
+  font-family: 'Epilogue';
+  font-size: 9.73277px;
+  font-style: normal;
+  font-weight: 300;
+  height: 50px;
+  left: 1454px;
+  line-height: 13px;
+  position: absolute;
+  top: 795px;
+  transform: rotate(-6.92deg);
+  width: 310px;
+  word-wrap: break-word;
+}
+
+.RectangleBranco {
+  height: 192.22px;
+  left: 1454px;
+  position: absolute;
+  top: 830px;
+  width: 308.53px;
+}
+
+.attr {
+  height: 100px;
+  left: 1480px;
+  position: absolute;
+  top: 880px;
+  width: 308.53px;
+}
+
+.attrName {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+}
+
+.nameAttr1 {
+  color: #3D495C;
+  font-family: 'Epilogue';
+  font-size: 15.572px;
+  font-style: normal;
+  font-weight: 600;
+  height: 23px;
+  left: calc(50% - 206.33px/2 + 256.75px);
+  line-height: 150%;
+  margin: 3px;
+  top: calc(50% - 23px/2 - 795.87px);
+  width: 206.33px;
+}
+
+.cardAttr1 {
+  align-items: center;
+  background: #023031;
+  border-radius: 0px 9.73277px 9.73277px 0px;
+  color: #FFFFFF;
+  display: flex;
+  font-family: 'Epilogue';
+  font-size: 15.572px;
+  font-style: normal;
+  font-weight: 600;
+  height: 29.92px;
+  justify-content: center;
+  left: 1013.54px;
+  line-height: 150%;
+  margin: 3px;
+  top: 976.77px;
+  width: 46.72px;
+}
+
+.nameAttr2 {
+  color: #3D495C;
+  font-family: 'Epilogue';
+  font-size: 15.572px;
+  font-style: normal;
+  font-weight: 600;
+  height: 23px;
+  left: calc(50% - 206.33px/2 + 256.75px);
+  line-height: 150%;
+  margin: 3px;
+  top: calc(50% - 23px/2 - 760.83px);
+  width: 206.33px;
+}
+
+.cardAttr2 {
+  align-items: center;
+  background: #023031;
+  border-radius: 0px 9.73277px 9.73277px 0px;
+  color: #FFFFFF;
+  display: flex;
+  font-family: 'Epilogue';
+  font-size: 15.572px;
+  font-style: normal;
+  font-weight: 600;
+  height: 29.92px;
+  justify-content: center;
+  left: 1013.54px;
+  line-height: 150%;
+  margin: 3px;
+  top: 976.77px;
+  width: 46.72px;
+}
+
+.nameAttr3 {
+  color: #3D495C;
+  font-family: 'Epilogue';
+  font-size: 15.572px;
+  font-style: normal;
+  font-weight: 600;
+  height: 23px;
+  left: calc(50% - 210.23px/2 + 258.7px);
+  line-height: 150%;
+  margin: 3px;
+  top: calc(50% - 23px/2 - 725.79px);
+  width: 210.23px;
+}
+
+.cardAttr3 {
+  align-items: center;
+  background: #023031;
+  border-radius: 0px 9.73277px 9.73277px 0px;
+  color: #FFFFFF;
+  display: flex;
+  font-family: 'Epilogue';
+  font-size: 15.572px;
+  font-style: normal;
+  font-weight: 600;
+  height: 29.92px;
+  justify-content: center;
+  left: 1013.54px;
+  line-height: 150%;
+  margin: 3px;
+  top: 976.77px;
+  width: 49.64px;
+}
+
+.rareCard {
+  color: #2FC18C;
+  font-family: 'Epilogue';
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 800;
+  height: 36px;
+  left: 744px;
+  line-height: 29px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 150px;
+}
+
+.trunfoCard {
+  color: #2FC18C;
+  font-family: 'Epilogue';
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 800;
+  height: 36px;
+  left: 744px;
+  line-height: 29px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 150px;
+}
+
+.rareTrunfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 338.7px;
+}
