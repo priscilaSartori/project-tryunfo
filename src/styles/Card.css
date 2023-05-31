@@ -1,0 +1,187 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 50px;
+  /* padding-top: 50px; */
+  width: 40%;
+}
+
+.legenda {
+  color: #2FC18C;
+  display: flex;
+  font-family: 'Epilogue';
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 800;
+  height: 36px;
+  justify-content: center;
+  left: 184px;
+  line-height: 29px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  top: 514px;
+  width: 355px;
+}
+
+.bordaBranca {
+  background: #FFFFFF;
+  border-radius: 9.73277px;
+  box-shadow: 0px 3.89311px 18.4923px rgba(0, 0, 0, 0.25);
+  height: 534.33px;
+  left: 742px;
+  top: 604px;
+  width: 358.17px;
+}
+
+.fundoVerde {
+  background: #036B52;
+  border-radius: 9.73277px;
+  height: 514.86px;
+  left: 10px;
+  position: relative;
+  top: 10px;
+  width: 338.7px;
+}
+
+.divNameCard {
+  background: #023031;
+  border-radius: 9.73277px 9.73277px 0px 0px;
+  height: 38.93px;
+  left: -1px;
+  margin-left: 15px;
+  /* margin-top: 15px; */
+  padding-top: 5px;
+  position: relative;
+  top: 10px;
+  width: 311.53px;
+  z-index: 1;
+}
+
+.nameCard {
+  color: #FFFFFF;
+  display: flex;
+  font-family: 'Epilogue';
+  font-size: 27.2518px;
+  font-style: normal;
+  font-weight: 700;
+  height: 35.04px;
+  justify-content: end;
+  /* left: 905px; */
+  line-height: 28px;
+  margin: 0;
+  /* position: relative; */
+  /* top: 639.04px; */
+  width: 290px;
+}
+
+.imageCard {
+  margin-left: 15px;
+  position: relative;
+  top: -20px;
+}
+
+.descriptionCard {
+  background: #036B52;
+  color: #FFFFFF;
+  font-family: 'Epilogue';
+  font-size: 9.73277px;
+  font-style: normal;
+  font-weight: 300;
+  height: 50px;
+  left: 10px;
+  line-height: 13px;
+  padding: 5px;
+  position: relative;
+  top: -60px;
+  transform: rotate(-6.92deg);
+  width: 308.53px;
+  z-index: 2;
+}
+
+.quadroAttr {
+  background: #FFFFFF;
+  height: 192.22px;
+  left: 675px;
+  position: absolute;
+  top: 455px;
+  /* transform: rotate(-180deg); */
+  width: 308.53px;
+  z-index: 1;
+}
+
+.divAttr {
+  background: #F0F2F5;
+  border-radius: 9.73277px;
+  display: flex;
+  flex-direction: row;
+  height: 29.92px;
+  left: 15px;
+  margin-bottom: 5px;
+  position: relative;
+  top: 35px;
+  width: 276.41px;
+}
+
+.pAttr {
+  color: #3D495C;
+  font-family: 'Epilogue';
+  font-size: 15.5724px;
+  font-style: normal;
+  font-weight: 600;
+  height: 23px;
+  line-height: 150%;
+  margin: 0;
+  margin-left: 10px;
+  margin-top: 3px;
+  width: 210px;
+}
+
+.h2Attr {
+  background: #023031;
+  border-radius: 0px 9.73277px 9.73277px 0px;
+  color: #FFFFFF;
+  display: flex;
+  font-family: 'Epilogue';
+  font-size: 15.5724px;
+  font-style: normal;
+  font-weight: 600;
+  height: 23px;
+  justify-content: center;
+  line-height: 150%;
+  margin: 0;
+  margin-top: 3px;
+  width: 50px;
+  z-index: 2;
+}
+
+.pRaridade {
+  color: #3D495C;
+  font-family: 'Epilogue';
+  font-size: 15.5724px;
+  font-style: normal;
+  font-weight: 600;
+  height: 23px;
+  line-height: 150%;
+  margin: 0;
+  margin-left: 10px;
+  margin-top: 3px;
+  width: 210px;
+}
+
+.super {
+  color: #3D495C;
+  font-family: 'Epilogue';
+  font-size: 15.5724px;
+  font-style: normal;
+  font-weight: 600;
+  height: 23px;
+  left: 100px;
+  line-height: 150%;
+  margin: 0;
+  margin-left: 10px;
+  margin-top: 10px;
+  position: relative;
+  top: 25px;
+  width: 210px;
+}

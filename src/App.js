@@ -1,6 +1,9 @@
 import React from 'react';
 import Form from './components/Form';
 import Card from './components/Card';
+import './App.css';
+import logoTryunfo from './logo_tryunfo.png';
+// import ImageCard from './images/ImageCard.png';
 
 class App extends React.Component {
   state = {
@@ -116,72 +119,78 @@ class App extends React.Component {
       cardFilterN = listCard.filter((card) => card.cardTrunfo);
     }
     return (
-      <div>
-        <h1>Tryunfo</h1>
-        <Form
-          cardName={ cardName }
-          cardDescription={ cardDescription }
-          cardAttr1={ cardAttr1 }
-          cardAttr2={ cardAttr2 }
-          cardAttr3={ cardAttr3 }
-          cardImage={ cardImage }
-          cardRare={ cardRare }
-          cardTrunfo={ cardTrunfo }
-          hasTrunfo={ hasTrunfo }
-          isSaveButtonDisabled={ isSaveButtonDisabled }
-          onSaveButtonClick={ this.onSaveButtonClick }
-          onInputChange={ this.onInputChange }
-        />
-        <Card
-          cardName={ cardName }
-          cardDescription={ cardDescription }
-          cardAttr1={ cardAttr1 }
-          cardAttr2={ cardAttr2 }
-          cardAttr3={ cardAttr3 }
-          cardImage={ cardImage }
-          cardRare={ cardRare }
-          cardTrunfo={ cardTrunfo }
-          hasTrunfo={ hasTrunfo }
-        />
-        <section>
-          <h2>Todas as cartas</h2>
-          <h4>O termo pesquisado:</h4>
-          <input
-            type="text"
-            data-testid="name-filter"
-            placeholder="Digite o nome da carta"
-            id="nameFilter"
-            name="nameFilter"
-            disabled={ trunfoFilter }
-            value={ nameFilter }
-            onChange={ this.onInputChange }
+      <div className="background">
+        <img src={ logoTryunfo } alt="logo Tryunfo" className="titulo" />
+        <div className="quadroBranco">
+          <Form
+            cardName={ cardName }
+            cardDescription={ cardDescription }
+            cardAttr1={ cardAttr1 }
+            cardAttr2={ cardAttr2 }
+            cardAttr3={ cardAttr3 }
+            cardImage={ cardImage }
+            cardRare={ cardRare }
+            cardTrunfo={ cardTrunfo }
+            hasTrunfo={ hasTrunfo }
+            isSaveButtonDisabled={ isSaveButtonDisabled }
+            onSaveButtonClick={ this.onSaveButtonClick }
+            onInputChange={ this.onInputChange }
           />
-          <select
-            data-testid="rare-filter"
-            type="select"
-            id="rareFilter"
-            name="rareFilter"
-            disabled={ trunfoFilter }
-            value={ rareFilter }
-            onChange={ this.onInputChange }
-          >
-            Raridade
-            <option value="todas">todas</option>
-            <option value="normal">normal</option>
-            <option value="raro">raro</option>
-            <option value="muito raro">Muito raro</option>
-          </select>
-          <label htmlFor="trunfoFilter">
-            Super Trunfo
+          <Card
+            cardName={ cardName }
+            cardDescription={ cardDescription }
+            cardAttr1={ cardAttr1 }
+            cardAttr2={ cardAttr2 }
+            cardAttr3={ cardAttr3 }
+            cardImage={ cardImage }
+            cardRare={ cardRare }
+            cardTrunfo={ cardTrunfo }
+            hasTrunfo={ hasTrunfo }
+          />
+        </div>
+        <section className="filtroCartas">
+          <h2 className="todasCartas">Todas as cartas</h2>
+          <div className="quadroFiltro">
+            <h4 className="textoTermo">O termo pesquisado:</h4>
             <input
-              id="trunfoFilter"
-              type="checkbox"
-              data-testid="trunfo-filter"
-              name="trunfoFilter"
-              value={ trunfoFilter }
+              type="text"
+              data-testid="name-filter"
+              placeholder="Digite o nome da carta"
+              id="nameFilter"
+              name="nameFilter"
+              disabled={ trunfoFilter }
+              value={ nameFilter }
               onChange={ this.onInputChange }
+              className="nameFilter"
             />
-          </label>
+            <select
+              data-testid="rare-filter"
+              type="select"
+              id="rareFilter"
+              name="rareFilter"
+              disabled={ trunfoFilter }
+              value={ rareFilter }
+              onChange={ this.onInputChange }
+              className="rareFilter"
+            >
+              Raridade
+              <option value="todas">todas</option>
+              <option value="normal">normal</option>
+              <option value="raro">raro</option>
+              <option value="muito raro">Muito raro</option>
+            </select>
+            <label htmlFor="trunfoFilter" className="superTrunfo">
+              Super Trunfo
+              <input
+                id="trunfoFilter"
+                type="checkbox"
+                data-testid="trunfo-filter"
+                name="trunfoFilter"
+                value={ trunfoFilter }
+                onChange={ this.onInputChange }
+              />
+            </label>
+          </div>
           {cardFilterN.map((card) => (
             <div key={ card.cardName }>
               <Card
