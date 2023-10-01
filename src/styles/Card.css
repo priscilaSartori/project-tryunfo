@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: space-between;
   margin: 50px;
-  /* padding-top: 50px; */
   width: 40%;
 }
 
@@ -50,7 +49,6 @@
   height: 38.93px;
   left: -1px;
   margin-left: 15px;
-  /* margin-top: 15px; */
   padding-top: 5px;
   position: relative;
   top: 10px;
@@ -67,11 +65,8 @@
   font-weight: 700;
   height: 35.04px;
   justify-content: end;
-  /* left: 905px; */
   line-height: 28px;
   margin: 0;
-  /* position: relative; */
-  /* top: 639.04px; */
   width: 290px;
 }
 
@@ -79,33 +74,37 @@
   margin-left: 15px;
   position: relative;
   top: -20px;
+  width: 91%;
+  height: 50%;
 }
 
 .descriptionCard {
   background: #036B52;
+  display: flex;
+  flex-wrap: wrap;
+  word-break: break-word; 
   color: #FFFFFF;
   font-family: 'Epilogue';
   font-size: 9.73277px;
   font-style: normal;
   font-weight: 300;
   height: 50px;
-  left: 10px;
+  left: 8px;
   line-height: 13px;
   padding: 5px;
   position: relative;
-  top: -60px;
+  top: -40px;
   transform: rotate(-6.92deg);
-  width: 308.53px;
+  width: 90%;
   z-index: 2;
 }
 
 .quadroAttr {
   background: #FFFFFF;
   height: 192.22px;
-  left: 675px;
+  left: 740px;
   position: absolute;
-  top: 455px;
-  /* transform: rotate(-180deg); */
+  top: 880px;
   width: 308.53px;
   z-index: 1;
 }

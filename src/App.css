@@ -1,10 +1,15 @@
 .background {
   background-color: #023031;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
 }
 
 .titulo {
   left: 500px;
-  position: relative;
+  /* position: relative; */
   width: 600px;
 }
 
@@ -15,11 +20,11 @@
   display: flex;
   flex-direction: row;
   height: 721px;
-  left: 230px;
-  padding-left: 50px;
-  position: relative;
+  /* left: 230px; */
+  /* padding-left: 50px; */
+  /* position: relative; */
   /* top: 20px; */
-  width: 1124px;
+  width: 80%;
 }
 
 .todasCartas {
@@ -98,6 +103,6 @@
 }
 
 .filtroCartas {
-  margin-left: 230px;
+  /* margin-left: 230px; */
   margin-top: 100px;
 }

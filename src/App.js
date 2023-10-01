@@ -3,7 +3,7 @@ import Form from './components/Form';
 import Card from './components/Card';
 import './App.css';
 import logoTryunfo from './logo_tryunfo.png';
-// import ImageCard from './images/ImageCard.png';
+import ImageCard from './images/ImageCard.png';
 
 class App extends React.Component {
   state = {
@@ -12,7 +12,7 @@ class App extends React.Component {
     cardAttr1: '0',
     cardAttr2: '0',
     cardAttr3: '0',
-    cardImage: '',
+    cardImage: ImageCard,
     cardRare: '',
     cardTrunfo: false,
     hasTrunfo: false,
