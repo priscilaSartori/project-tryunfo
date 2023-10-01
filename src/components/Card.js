@@ -51,7 +51,9 @@ class Card extends React.Component {
               <p data-testid="rare-card" className="h2Attr">{cardRare}</p>
             </div>
             {cardTrunfo
-              ? <h2 data-testid="trunfo-card" id="trunfo" className="super">Super Trunfo</h2> : <h2> </h2>}
+              // eslint-disable-next-line max-len
+              ? <h2 data-testid="trunfo-card" id="trunfo" className="super">Super Trunfo</h2>
+              : <h2> </h2>}
           </div>
         </div>
       </div>
